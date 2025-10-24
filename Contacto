@@ -16,7 +16,7 @@
                     <li><a href="que-son-las-hd.html">¿Qué son las HD?</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
                     <li><a href="referencias.html">Referencias</a></li>
-                    <li><a href="Human-Experience-Canvas.html">Human Experience Canvas</a></li>
+                    <li><a href="human-experience-canvas.html">Human Experience Canvas</a></li>
                     <li><a href="contacto.html" class="active">Contacto</a></li>
                 </ul>
             </nav>
@@ -38,10 +38,11 @@
         <main class="content">
             <p>Si quieres saber más de las HD escribe a</p>
             <p>natalia.rocha@tec.mx</p>
-            <br>Multi-line comment
+            
             <p>O date una vuelta al Tec Campus Guadalajara</p>
             <br>
-            <p><a>Humaniza lo digital</a></p>
+            
+            <p><strong>Humaniza lo digital</strong></p>
         </main>
     </div>
 
