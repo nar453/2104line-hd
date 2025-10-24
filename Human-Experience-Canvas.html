@@ -1,92 +1,23 @@
-  <style>
-        /* --- Estilo Base (Inspirado en la imagen) --- */
-        body {
-            font-family: 'SUSE mono', monospace;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Fondo blanco total */
-            color: #000000; /* Texto negro total */
-            font-size: 16px; 
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        /* --- Tipografía Fuerte --- */
-        h1, h2, h3, h4, strong {
-            color: #000;
-            margin: 0;
-            font-weight: 700; /* 'bold' en monospace */
-        }
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-        }
-        h2 {
-            font-size: 2.2rem;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #000; /* Línea dura */
-            padding-bottom: 10px;
-        }
-        h3 {
-            font-size: 1.75rem;
-            text-align: center;
-            color: #000;
-            margin-top: 10px;
-        }
-        p {
-            font-size: 1.05rem;
-        }
-        
-        /* --- Nav Bar (Inspirado en la imagen) --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            border-bottom: 1px solid #000;
-        }
-        nav .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        nav .links a {
-            font-family: 'SUSE mono', monospace;
-            text-decoration: none;
-            color: #000;
-            margin-left: 25px;
-            font-size: 1rem;
-        }
-        nav .links a:hover,
-        nav .links a.active {
-            text-decoration: underline; /* Estilo de link de la imagen */
-        }
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Human Experience Canvas [HXC]</title>
+    <title>Human Experience Canvas</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header-left">
-            <a href="index.html" class="logo">[T]</a>
+            <a href="index.html" class="logo">[[T]]</a>
             <nav class="nav">
                 <ul>
                     <li><a href="que-son-las-hd.html">¿Qué son las HD?</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
                     <li><a href="referencias.html">Referencias</a></li>
-                    <li><a href="Human-Experience-Canvas.html">Human Experience Canvas</a></li>
-                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="human-experience-canvas.html" class="active">Human Experience Canvas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -98,233 +29,98 @@
             <span class="menu-icon">☰</span>
         </div>
     </header>
-  
-        /* --- Header y Intro --- */
-        .intro {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #333; /* Un poco más suave para diferenciar */
-            margin: 25px 0 60px 0;
-        }
 
-        /* --- El Grid de Canvas (Dinámico y Brutalista) --- */
-        .canvas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .canvas-block {
-            background-color: #ffffff;
-            border-radius: 0; /* Sin esquinas redondeadas */
-            padding: 30px;
-            border: 1px solid #ddd; /* Borde sutil */
-            box-shadow: none; /* Sin sombras */
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+    <div class="main-container">
+        <aside class="sidebar">
+            <p>Human Experience Canvas</p>
+        </aside>
 
-        /* --- Efecto Dinámico (Hover) --- */
-        .canvas-block:hover {
-            transform: translateY(-8px);
-            border-color: #000; /* Borde se vuelve negro al pasar */
-        }
+        <main class="content">
 
-        .canvas-block h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        .canvas-block .label-old {
-            color: #777; /* Gris para el texto de 'antes' */
-            font-size: 0.95rem;
-            text-decoration: none; /* Quitamos el tachado */
-        }
-        .canvas-block .label-new {
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: #000;
-        }
-        .canvas-block .vibe-check {
-            color: #333;
-            margin-top: 15px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-            /* Eliminamos 'italic' */
-        }
-        
-        /* --- Sección "Why" (Propósito) --- */
-        .why-hxc article {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 0; /* Sin esquinas redondeadas */
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-        }
-        .why-hxc h4 {
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-        }
-
-        /* --- CTA (Call to Action) Estilo "Link" --- */
-        .cta-section {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: transparent; /* Sin fondo */
-            color: #000;
-            padding: 15px 10px; /* Menos padding lateral */
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none; /* Sin subrayado base */
-            border-radius: 0; /* Sin esquinas redondeadas */
-            margin: 10px 5px;
-            transition: transform 0.2s ease, text-decoration 0.2s ease;
-        }
-        .cta-button:hover {
-            background-color: transparent; /* Se mantiene transparente */
-            transform: translateY(-3px); /* Mantenemos dinamismo */
-            text-decoration: underline; /* El hover de la imagen */
-        }
-        .cta-button.secondary {
-            background-color: transparent;
-            color: #000;
-            border: none; /* Sin bordes */
-        }
-        .cta-button.secondary:hover {
-            border: none;
-            text-decoration: underline;
-        }
-
-    </style>
-</head>
-<body>
-
-      <nav class="nav">
-                <ul>
-                    <li><a href="que-son-las-hd.html">¿Qué son las HD?</a></li>
-                    <li><a href="proyectos.html">Proyectos</a></li>
-                    <li><a href="referencias.html">Referencias</a></li>
-                    <li><a href="Human-Experience-Canvas.html">Human Experience Canvas</a></li>
-                    <li><a href="contacto.html" class="active">Contacto</a></li>
-                </u
-    <main class="container">
-
-        <header>
             <h1>El Canvas HXC</h1>
             <h3>Menos Transacción. Más Conexión.</h3>
-            <p class="intro">
+            <p>
                 El canvas de negocio tradicional se enfoca en el <strong>qué</strong>.
                 <br>
                 El Human Experience Canvas (HXC) se enfoca en el <strong>por qué</strong>.
-                <br>
-                <br>
+                <br><br>
                 Esto no reemplaza la lógica de negocio. <strong>La humaniza.</strong>
             </p>
-        </header>
 
-        <section>
             <h2>El Upgrade: De Procesos a Personas</h2>
 
-            <div class="canvas-grid">
+            <h3>1. Clientes → Comunidades</h3>
+            <p>[En lugar de: Segmentos de Cliente]</p>
+            <p>Ahora: Comunidades y Contextos</p>
+            <p><strong>The Vibe:</strong> No es un target. Es una comunidad. Descubre su cultura, su contexto, su vibe real.</p>
 
-                <article class="canvas-block">
-                    <h4>1. Clientes → Comunidades</h4>
-                    <p class="label-old">[En lugar de: Segmentos de Cliente]</p>
-                    <p class="label-new">Ahora: Comunidades y Contextos</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> No es un target. Es una comunidad. Descubre su cultura, su contexto, su vibe real.</p>
-                </article>
+            <h3>2. Valor → Significado</h3>
+            <p>[En lugar de: Propuesta de Valor]</p>
+            <p>Ahora: Propuesta de Significado</p>
+            <p><strong>The Vibe:</strong> Tu producto no es solo funcional. Es una señal. ¿Qué significado aporta a sus vidas? ¿Qué les ayuda a decir de sí mismos?</p>
 
-                <article class="canvas-block">
-                    <h4>2. Valor → Significado</h4>
-                    <p class="label-old">[En lugar de: Propuesta de Valor]</p>
-                    <p class="label-new">Ahora: Propuesta de Significado</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> Tu producto no es solo funcional. Es una señal. ¿Qué significado aporta a sus vidas? ¿Qué les ayuda a decir de sí mismos?</p>
-                </article>
+            <h3>3. Canales → Diálogos</h3>
+            <p>[En lugar de: Canales]</p>
+            <p>Ahora: Diálogos y Conexiones</p>
+            <p><strong>The Vibe:</strong> Deja de ser un monólogo. Tus canales son espacios para conversar. ¿Estás escuchando? ¿Es una conexión real?</p>
 
-                <article class="canvas-block">
-                    <h4>3. Canales → Diálogos</h4>
-                    <p class="label-old">[En lugar de: Canales]</p>
-                    <p class="label-new">Ahora: Diálogos y Conexiones</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> Deja de ser un monólogo. Tus canales son espacios para conversar. ¿Estás escuchando? ¿Es una conexión real?</p>
-                </article>
+            <h3>4. Relación → Pertenencia</h3>
+            <p>[En lugar de: Relación con Clientes]</p>
+            <p>Ahora: Vínculos y Pertenencia</p>
+            <p><strong>The Vibe:</strong> La 'retención' es aborrida. La pertenencia es todo. No construyas una base de datos. Construye un club al que quieran pertenecer.</p>
+            
+            <h3>5. Ingresos → Valor Recíproco</h3>
+            <p>[En lugar de: Flujos de Ingreso]</p>
+            <p>Ahora: Flujos de Valor (Recíproco)</p>
+            <p><strong>The Vibe:</strong> El dinero es el resultado. El valor es el input. Piensa en el intercambio completo: social, cultural, emocional.</p>
 
-                <article class="canvas-block">
-                    <h4>4. Relación → Pertenencia</h4>
-                    <p class="label-old">[En lugar de: Relación con Clientes]</p>
-                    <p class="label-new">Ahora: Vínculos y Pertenencia</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> La 'retención' es aburrida. La pertenencia es todo. No construyas una base de datos. Construye un club al que quieran pertenecer.</p>
-                </article>
-                
-                <article class="canvas-block">
-                    <h4>5. Ingresos → Valor Recíproco</h4>
-                    <p class="label-old">[En lugar de: Flujos de Ingreso]</p>
-                    <p class="label-new">Ahora: Flujos de Valor (Recíproco)</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> El dinero es el resultado. El valor es el input. Piensa en el intercambio completo: social, cultural, emocional.</p>
-                </article>
+            <h3>6. Recursos → Cultura</h3>
+            <p>[En lugar de: Recursos Clave]</p>
+            <p>Ahora: Talento, Cultura y Propósito</p>
+            <p><strong>The Vibe:</strong> Tu mejor recurso no es tu tech. Es tu cultura. ¿Tu equipo vive el propósito que vendes? El hype empieza adentro.</p>
 
-                <article class="canvas-block">
-                    <h4>6. Recursos → Cultura</h4>
-                    <p class="label-old">[En lugar de: Recursos Clave]</p>
-                    <p class="label-new">Ahora: Talento, Cultura y Propósito</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> Tu mejor recurso no es tu tech. Es tu cultura. ¿Tu equipo vive el propósito que vendes? El hype empieza adentro.</p>
-                </article>
+            <h3>7. Actividades → Impacto</h3>
+            <p>[En lugar de: Actividades Clave]</p>
+            <p>Ahora: Acciones de Impacto</p>
+            <p><strong>The Vibe:</strong> No es solo 'operar'. Es impactar. ¿Qué acciones de tu día a día dejan una huella humana real?</p>
 
-                <article class="canvas-block">
-                    <h4>7. Actividades → Impacto</h4>
-                    <p class="label-old">[En lugar de: Actividades Clave]</p>
-                    <p class="label-new">Ahora: Acciones de Impacto</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> No es solo 'operar'. Es impactar. ¿Qué acciones de tu día a día dejan una huella humana real?</p>
-                </article>
+            <h3>8. Socios → Ecosistema</h3>
+            <p>[En lugar de: Socios Clave]</p>
+            <p>Ahora: Ecosistema y Aliados</p>
+            <p><strong>The Vibe:</strong> No busques proveedores. Busca aliados de valores. Juntos, el impacto se multiplica.</p>
 
-                <article class="canvas-block">
-                    <h4>8. Socios → Ecosistema</h4>
-                    <p class="label-old">[En lugar de: Socios Clave]</p>
-                    <p class="label-new">Ahora: Ecosistema y Aliados</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> No busques proveedores. Busca aliados de valores. Juntos, el impacto se multiplica.</p>
-                </article>
+            <h3>9. Costos → Inversión</h3>
+            <p>[En lugar de: Estructura de Costos]</p>
+            <p>Ahora: Inversión en Legado</p>
+            <p><strong>The Vibe:</strong> No es un 'costo'. Es una inversión. Cada peso es una apuesta por tu legado. ¿Dónde inviertes para ser sostenible?</p>
 
-                <article class="canvas-block">
-                    <h4>9. Costos → Inversión</h4>
-                    <p class="label-old">[En lugar de: Estructura de Costos]</p>
-                    <p class="label-new">Ahora: Inversión en Legado</p>
-                    <p class="vibe-check"><strong>The Vibe:</strong> No es un 'costo'. Es una inversión. Cada peso es una apuesta por tu legado. ¿Dónde inviertes para ser sostenible?</p>
-                </article>
-
-            </div>
-        </section>
-
-        <section class="why-hxc">
+            
             <h2>El "Por Qué" del HXC</h2>
             
-            <article>
-                <h4>El propósito es el nuevo <i>profit</i>.</h4>
-                <p>Las personas ya no compran lo que haces; compran <strong>por qué</strong> lo haces. Punto.</p>
-            </article>
+            <h3>El propósito es el nuevo <i>profit</i>.</h3>
+            <p>Las personas ya no compran lo que haces; compran <strong>por qué</strong> lo haces. Punto.</p>
 
-            <article>
-                <h4>La empatía es tu <i>edge</i> estratégico.</h4>
-                <p>Diseñar desde la empatía no es <i>soft</i>. Es tu ventaja competitiva. Crea productos que la gente <strong>ama</strong>, no solo <strong>usa</strong>.</p>
-            </article>
+            <h3>La empatía es tu <i>edge</i> estratégico.</h3>
+            <p>Diseñar desde la empatía no es <i>soft</i>. Es tu ventaja competitiva. Crea productos que la gente <strong>ama</strong>, no solo <strong>usa</strong>.</p>
             
-            <article>
-                <h4>Construyes Marcas, no solo Negocios.</h4>
-                <p>Una marca es un sistema de significado. El HXC es tu <strong>playbook</strong> para construirlo de forma coherente.</p>
-            </article>
-        </section>
-
-        <footer class="cta-section">
+            <h3>Construyes Marcas, no solo Negocios.</h3>
+            <p>Una marca es un sistema de significado. El HXC es tu <strong>playbook</strong> para construirlo de forma coherente.</p>
+            
+            <br>
             <h3>Diseña Negocios. Construye Significado.</h3>
             <p>¿Listo para dejar de transaccionar y empezar a conectar?</p>
             
-            <div>
-                <a href="/descarga-canvas" class="cta-button">Descarga el HXC</a>
-                <a href="/contacto" class="cta-button secondary">Hablemos</a>
-            </div>
-        </footer>
+            <p>
+                <a href="#" class="link">Descarga el HXC</a>
+                <br>
+                <a href="contacto.html" class="link">Hablemos</a>
+            </p>
+            
+            </main>
+    </div>
 
-    </main>
-
+    <footer class="footer">
+        <p>Zapopan, 24 de octubre de 2025, 11:07:56 a.m.</p>
+    </footer>
 </body>
 </html>
