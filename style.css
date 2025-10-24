@@ -170,3 +170,44 @@ body {
     height: auto;
     display: block; 
 }
+/* --- Estilos de la Línea de Tiempo --- */
+
+/* El contenedor principal de la línea de tiempo */
+.timeline {
+    border-left: 1px solid #ccc; /* La línea vertical, igual a los bordes del sitio */
+    margin: 30px 0 30px 10px;  /* Margen superior, inferior, e izquierdo */
+    padding-left: 30px;         /* Espacio entre la línea y el texto */
+    position: relative;
+}
+
+/* Cada uno de los eventos en la línea */
+.timeline-item {
+    position: relative;      /* Necesario para posicionar el punto */
+    margin-bottom: 25px;     /* Espacio entre cada "ola" */
+}
+
+/* El último item no necesita margen inferior */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* El punto (círculo) en la línea */
+.timeline-item::before {
+    content: '';             /* Requerido para crear un pseudo-elemento */
+    position: absolute;
+    
+    /* Posicionamiento del punto: */
+    left: -35px;             /* (30px de padding) + (la mitad de 8px) + (1px de borde) */
+    top: 8px;                /* Ajusta esto para alinear el punto con el texto (8px funciona bien con la fuente mono) */
+    
+    /* Estilo del punto */
+    width: 8px;
+    height: 8px;
+    background-color: #333; /* Un punto sólido, del color del texto */
+    border-radius: 50%;      /* Lo hace un círculo perfecto */
+}
+
+/* Opcional: hace que los títulos de la línea de tiempo sean más notorios */
+.timeline-item h3 {
+    font-weight: 700; /* Asegura que el título de la ola esté en negrita */
+}
