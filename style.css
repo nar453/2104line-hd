@@ -104,11 +104,19 @@ body {
     text-decoration: underline;
 }
 
-.image-placeholder {
-    margin-top: 30px;
-    border: 1px solid #ccc; /* Borde alrededor de la imagen como en la referencia */
-    padding: 5px;
+/* Estilo para los 'iconos' de arte ASCII */
+.ascii-placeholder {
+    border: 1px solid #ccc; /* El mismo borde del diseño */
+    padding: 15px 20px;      /* Espaciado interno */
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: inline-block; /* Para que el borde se ajuste al contenido */
+
+    /* Asegura la fuente monoespaciada correcta */
+    font-family: 'Source Code Pro', monospace; 
+    line-height: 1.3;        /* Interlineado del 'dibujo' */
+    font-size: 0.9em;        /* Un tamaño un poco más pequeño */
+    color: #555;            /* Un gris oscuro para que no sea tan intenso */
 }
 
 .fax-image {
