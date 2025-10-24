@@ -1,9 +1,20 @@
+/* --- Variables Globales de Estilo --- */
+:root {
+    --color-accent: #5F00D8; /* El morado/violeta solicitado */
+    --color-text: #333;
+    --color-text-dark: #000;
+    --color-border: #ccc;
+    --color-border-light: #eee;
+    --color-bg-body: #f0f0f0;
+    --color-bg-content: #fff;
+}
+
 body {
     font-family: 'SUSE Mono', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Fondo claro para imitar el papel */
-    color: #333;
+    background-color: var(--color-bg-body); /* Fondo claro */
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,8 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-    background-color: #fff;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg-content);
 }
 
 .header-left {
@@ -24,9 +35,10 @@ body {
 }
 
 .logo {
-    font-weight: bold;
+    font-weight: 700; /* Usamos 700 para 'bold' */
     font-size: 24px;
     margin-right: 20px;
+    color: var(--color-accent); /* Aplicamos acento morado */
 }
 
 .nav ul {
@@ -42,15 +54,16 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     padding: 5px 0;
     position: relative;
 }
 
 .nav a.active {
-    font-weight: bold;
-    /* Efecto de borde inferior como en la imagen */
-    box-shadow: inset 0 -3px 0 0 #333; /* Simula un subrayado grueso */
+    font-weight: 700;
+    color: var(--color-accent); /* Aplicamos acento morado */
+    /* Efecto de borde inferior con el color de acento */
+    box-shadow: inset 0 -3px 0 0 var(--color-accent);
 }
 
 .header-right {
@@ -62,7 +75,7 @@ body {
     width: 20px;
     height: 20px;
     margin-left: 15px;
-    filter: invert(30%); /* Para hacer los iconos oscuros si son blancos */
+    filter: invert(30%);
 }
 
 .menu-icon {
@@ -73,69 +86,144 @@ body {
 
 .main-container {
     display: flex;
-    flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
-    border-left: 1px solid #ccc; /* Borde izquierdo para separar la barra lateral */
-    border-right: 1px solid #ccc;
-    background-color: #fff; /* Fondo blanco para el contenido principal */
-    margin: 20px; /* Margen alrededor del contenido */
+    flex: 1; 
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    background-color: var(--color-bg-content); 
+    margin: 20px; 
 }
 
 .sidebar {
     width: 150px;
     padding: 20px;
-    border-right: 1px solid #ccc;
-    font-weight: bold;
-    flex-shrink: 0; /* Evita que la barra lateral se encoja */
+    border-right: 1px solid var(--color-border);
+    font-weight: 700;
+    flex-shrink: 0; 
+    color: var(--color-accent); /* Aplicamos acento morado */
 }
 
 .content {
     padding: 20px;
     line-height: 1.6;
-    max-width: 700px; /* Limita el ancho del texto para mejor legibilidad */
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+    max-width: 700px; 
+    flex-grow: 1; 
 }
+
+/* --- ESTILOS DE TIPOGRAFÍA DE CONTENIDO (CON ACENTO) --- */
 
 .content p {
     margin-bottom: 1em;
 }
 
 .content .link {
-    color: #333;
+    color: var(--color-accent); /* Aplicamos acento morado */
     text-decoration: underline;
+    font-weight: 700;
 }
 
-/* Estilo para los 'iconos' de arte ASCII */
+/* Títulos y negritas usan el color de acento */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content strong {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+.content h2 {
+    font-size: 2.2rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-text-dark); /* Borde negro, estilo HXC */
+    padding-bottom: 10px;
+}
+.content h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 10px;
+}
+.content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* --- FIN DE ESTILOS DE TIPOGRAFÍA --- */
+
+
 .ascii-placeholder {
-    border: 1px solid #ccc; /* El mismo borde del diseño */
-    padding: 15px 20px;      /* Espaciado interno */
+    border: 1px solid var(--color-border);
+    padding: 15px 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: inline-block; /* Para que el borde se ajuste al contenido */
-
-    /* Asegura la fuente monoespaciada correcta */
+    display: inline-block; 
     font-family: 'Source Code Pro', monospace; 
-    line-height: 1.3;        /* Interlineado del 'dibujo' */
-    font-size: 0.9em;        /* Un tamaño un poco más pequeño */
-    color: #555;            /* Un gris oscuro para que no sea tan intenso */
+    line-height: 1.3;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.image-placeholder {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    border: 1px solid var(--color-border); 
+    padding: 5px;
+    display: inline-block; 
+    max-width: 90%; 
 }
 
 .fax-image {
     max-width: 100%;
     height: auto;
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    display: block; 
 }
 
 .footer {
     padding: 10px 20px;
-    border-top: 1px solid #ccc;
-    text-align: right; /* Alinea el pie de página a la derecha */
+    border-top: 1px solid var(--color-border);
+    text-align: right; 
     font-size: 0.8em;
     color: #666;
-    background-color: #fff;
-    margin-top: auto; /* Empuja el footer al final de la página */
+    background-color: var(--color-bg-content);
+    margin-top: auto; 
 }
 
-/* Media Queries para responsividad */
+/* --- Estilos de la Línea de Tiempo --- */
+
+.timeline {
+    border-left: 1px solid var(--color-border); 
+    margin: 30px 0 30px 10px; 
+    padding-left: 30px; 
+    position: relative;
+}
+
+.timeline-item {
+    position: relative; 
+    margin-bottom: 25px; 
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: ''; 
+    position: absolute;
+    left: -35px; 
+    top: 8px; 
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent); /* Punto morado */
+    border-radius: 50%; 
+}
+/* .timeline-item h3 ya está cubierto por .content h3 */
+
+
+/* --- Media Queries para responsividad --- */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -160,62 +248,107 @@ body {
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid var(--color-border);
         padding-bottom: 10px;
     }
 }
-.image-placeholder {
-    margin-top: 20px; /* Reduje un poco el margen superior */
-    margin-bottom: 20px; /* Añadí margen inferior */
-    border: 1px solid #ccc; 
-    padding: 5px;
-    display: inline-block; /* Para que el borde se ajuste */
-    max-width: 90%; /* Asegura que no se desborde en móvil */
+
+
+/* --- INICIO: ESTILOS INTEGRADOS DEL HXC (Human Experience Canvas) --- */
+
+.canvas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px; /* Espacio añadido */
 }
 
-.fax-image {
-    max-width: 100%; /* Hace la imagen responsiva dentro del placeholder */
-    height: auto;
-    display: block; 
-}
-/* --- Estilos de la Línea de Tiempo --- */
-
-/* El contenedor principal de la línea de tiempo */
-.timeline {
-    border-left: 1px solid #ccc; /* La línea vertical, igual a los bordes del sitio */
-    margin: 30px 0 30px 10px;  /* Margen superior, inferior, e izquierdo */
-    padding-left: 30px;         /* Espacio entre la línea y el texto */
-    position: relative;
+.canvas-block {
+    background-color: var(--color-bg-content);
+    border-radius: 0; /* Estilo brutalista/plano */
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    box-shadow: none; /* Sin sombras */
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Cada uno de los eventos en la línea */
-.timeline-item {
-    position: relative;      /* Necesario para posicionar el punto */
-    margin-bottom: 25px;     /* Espacio entre cada "ola" */
+/* Efecto Dinámico (Hover) */
+.canvas-block:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-text-dark); /* Borde se vuelve negro */
 }
 
-/* El último item no necesita margen inferior */
-.timeline-item:last-child {
-    margin-bottom: 0;
+/* h4 ya está cubierto por .content h4 */
+
+.canvas-block .label-old {
+    color: #777;
+    font-size: 0.95rem;
 }
 
-/* El punto (círculo) en la línea */
-.timeline-item::before {
-    content: '';             /* Requerido para crear un pseudo-elemento */
-    position: absolute;
-    
-    /* Posicionamiento del punto: */
-    left: -35px;             /* (30px de padding) + (la mitad de 8px) + (1px de borde) */
-    top: 8px;                /* Ajusta esto para alinear el punto con el texto (8px funciona bien con la fuente mono) */
-    
-    /* Estilo del punto */
-    width: 8px;
-    height: 8px;
-    background-color: #333; /* Un punto sólido, del color del texto */
-    border-radius: 50%;      /* Lo hace un círculo perfecto */
+.canvas-block .label-new {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-accent); /* "Ahora:" en morado */
 }
 
-/* Opcional: hace que los títulos de la línea de tiempo sean más notorios */
-.timeline-item h3 {
-    font-weight: 700; /* Asegura que el título de la ola esté en negrita */
+.canvas-block .vibe-check {
+    color: var(--color-text);
+    margin-top: 15px;
+    border-top: 1px solid var(--color-border-light);
+    padding-top: 15px;
 }
+
+/* Sección "Why" (Propósito) */
+.why-hxc {
+    margin-top: 40px; /* Espacio añadido */
+}
+
+.why-hxc article {
+    background-color: var(--color-bg-content);
+    padding: 25px;
+    border-radius: 0;
+    border: 1px solid var(--color-border);
+    margin-bottom: 15px;
+}
+/* h4 y strong ya están cubiertos por .content h4 y .content strong */
+
+
+/* CTA (Call to Action) Estilo "Link" */
+.cta-section {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border-light);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-accent); /* CTAs en morado */
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: 700; /* Negrita */
+    text-decoration: none;
+    border-radius: 0;
+    margin: 10px 5px;
+    transition: transform 0.2s ease, text-decoration 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    transform: translateY(-3px);
+    text-decoration: underline;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--color-accent); /* También en morado */
+    border: none;
+}
+
+.cta-button.secondary:hover {
+    border: none;
+    text-decoration: underline;
+}
+
+/* --- FIN: ESTILOS INTEGRADOS DEL HXC --- */
