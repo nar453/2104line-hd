@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Canvas de Experiencia Humana (HXC)</title>
+    <style>
+        /* Estilos básicos para demostración */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #111;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #555;
+            text-align: center;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .canvas-block {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .canvas-block h4 {
+            margin: 0 0 15px 0;
+            font-size: 1.25rem;
+            color: #000;
+        }
+        .canvas-block .label-old {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .canvas-block .label-new {
+            font-weight: 700;
+            color: #0056b3; /* Color de acento */
+            font-size: 1.1rem;
+        }
+        .canvas-block .question {
+            font-style: italic;
+            color: #444;
+            margin-top: 15px;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #004494;
+        }
+        .cta-button.secondary {
+            background-color: #eee;
+            color: #333;
+        }
+        .cta-button.secondary:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>El Canvas de Experiencia Humana (HXC)</h1>
+            <h3>Deja de vender "productos". Empieza a construir "significado".</h3>
+            <p class="intro">
+                Los modelos de negocio tradicionales se centran en la transacción. Optimizan procesos, analizan segmentos y buscan la eficiencia.
+                <br>
+                El <i>Business Model Canvas</i> es brillante para el <strong>qué</strong>.
+                <br>
+                El <i>Human Experience Canvas</i> (HXC) es esencial para el <strong>por qué</strong>.
+                <br><br>
+                Este modelo es la evolución: traduce las métricas de negocio en métricas de impacto humano. No reemplazamos la lógica de negocio; la profundizamos con empatía.
+            </p>
+        </header>
+
+        <section>
+            <h2>El Modelo HXC: Humanizando cada Bloque</h2>
+            <p>Así es como transformamos el canvas tradicional de un modelo de <i>procesos</i> a un modelo de <i>personas</i>.</p>
+
+            <div class="canvas-grid">
+
+                <article class="canvas-block">
+                    <h4>1. Clientes → Comunidades</h4>
+                    <p class="label-old">En lugar de: <code>Segmentos de Cliente</code></p>
+                    <p class="label-new">Ahora: <code>Comunidades y Contextos</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> No preguntes solo <i>quién compra</i>. Pregunta: <i>¿qué les importa?, ¿qué cultura comparten?, ¿cuál es su contexto real y sus verdaderas tensiones?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>2. Valor → Significado</h4>
+                    <p class="label-old">En lugar de: <code>Propuesta de Valor</code></p>
+                    <p class="label-new">Ahora: <code>Propuesta de Significado</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> Más allá del <i>qué obtienen</i> (el beneficio funcional), piensa: <i>¿cómo enriquece esto sus vidas?, ¿qué sentido les aporta?, ¿qué historia les ayuda a contar sobre sí mismos?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>3. Canales → Diálogos</h4>
+                    <p class="label-old">En lugar de: <code>Canales</code></p>
+                    <p class="label-new">Ahora: <code>Diálogos y Conexiones</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> No son solo puntos de distribución. Son espacios de conversación. <i>¿Dónde y cómo conectamos auténticamente? ¿Es una relación bidireccional o solo un monólogo?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>4. Relación → Pertenencia</h4>
+                    <p class="label-old">En lugar de: <code>Relación con Clientes</code></p>
+                    <p class="label-new">Ahora: <code>Vínculos y Pertenencia</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> El objetivo no es la "retención". El objetivo es la "pertenencia". <i>¿Cómo construimos una comunidad real, no solo una base de datos? ¿Cómo se sienten parte de algo más grande?</i></p>
+                </article>
+                
+                <article class="canvas-block">
+                    <h4>5. Ingresos → Valor Recíproco</h4>
+                    <p class="label-old">En lugar de: <code>Flujos de Ingreso</code></p>
+                    <p class="label-new">Ahora: <code>Flujos de Valor (Recíproco)</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> El dinero es un resultado, no el único objetivo. <i>¿Cuál es el intercambio total de valor? (Social, intelectual, emocional). ¿Cómo es sostenible para ellos y para nosotros?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>6. Recursos → Cultura</h4>
+                    <p class="label-old">En lugar de: <code>Recursos Clave</code></p>
+                    <p class="label-new">Ahora: <code>Talento, Cultura y Propósito</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> Tu recurso más importante no es tu patente, es tu gente. <i>¿Cuál es nuestra cultura interna? ¿Nuestro equipo vive el propósito que proyectamos hacia afuera?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>7. Actividades → Impacto</h4>
+                    <p class="label-old">En lugar de: <code>Actividades Clave</code></p>
+                    <p class="label-new">Ahora: <code>Acciones de Impacto</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> <i>¿Qué acciones diarias generan un impacto humano tangible (en el cliente, el equipo, la sociedad), más allá de la pura operación?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>8. Socios → Ecosistema</h4>
+                    <p class="label-old">En lugar de: <code>Socios Clave</code></p>
+                    <p class="label-new">Ahora: <code>Ecosistema y Aliados de Valores</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> No busques solo proveedores. <i>¿Con quién compartimos valores? ¿Con quién podemos crear un impacto mayor del que podríamos solos?</i></p>
+                </article>
+
+                <article class="canvas-block">
+                    <h4>9. Costos → Inversión</h4>
+                    <p class="label-old">En lugar de: <code>Estructura de Costos</code></p>
+                    <p class="label-new">Ahora: <code>Inversión en Sostenibilidad y Legado</code></p>
+                    <p class="question"><strong>La pregunta cambia:</strong> <i>¿Dónde invertimos nuestro tiempo, dinero y esfuerzo para asegurar nuestro impacto y sostenibilidad a largo plazo (humana, cultural, ambiental)?</i></p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="why-hxc">
+            <h2>¿Por qué usar el HXC?</h2>
+            
+            <article>
+                <h4>Porque el propósito es el nuevo <i>profit</i>.</h4>
+                <p>Las personas ya no compran lo que haces; compran <i>por qué</i> lo haces.</p>
+            </article>
+
+            <article>
+                <h4>Porque la empatía es la estrategia de negocio definitiva.</h4>
+                <p>Diseñar desde la experiencia humana no es "suave", es inteligente. Reduce la fricción, aumenta la lealtad y crea productos que la gente <strong>ama</strong>, no solo <strong>usa</strong>.</p>
+            </article>
+            
+            <article>
+                <h4>Porque construyes marcas, no solo negocios.</h4>
+                <p>Una marca es un sistema de significado. El HXC es el mapa para construir ese sistema de forma coherente, desde tu equipo hasta tu usuario final.</p>
+            </article>
+        </section>
+
+        <footer class="cta-section">
+            <h3>Diseña Negocios. Construye Significado.</h3>
+            <p>¿Listo para dejar de pensar en transacciones y empezar a construir relaciones?</p>
+            
+            <div>
+                <a href="/descarga-canvas" class="cta-button">Descarga el Canvas HXC</a>
+                <a href="/contacto" class="cta-button secondary">Agenda una Consultoría</a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
