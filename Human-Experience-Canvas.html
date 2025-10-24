@@ -3,106 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Canvas de Experiencia Humana (HXC)</title>
+    <title>El Canvas HXC</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
     <style>
-        /* Estilos básicos para demostración */
+        /* --- Estilo Base Minimalista --- */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f7; /* Un gris muy claro */
             color: #333;
         }
         .container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 20px;
         }
-        h1, h2, h3 {
-            font-weight: 700;
+
+        /* --- Tipografía Fuerte --- */
+        h1, h2, h3, h4 {
             color: #111;
+            margin: 0;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem; /* Más grande */
+            font-weight: 900; /* Más bold */
             text-align: center;
-            margin-bottom: 1rem;
+            letter-spacing: -1.5px;
         }
         h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 50px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-top: 60px;
+            margin-bottom: 20px;
         }
         h3 {
-            font-size: 1.5rem;
-            color: #555;
+            font-size: 1.75rem;
+            font-weight: 700;
             text-align: center;
+            color: #444;
+            margin-top: 10px;
         }
+        p {
+            font-size: 1.05rem;
+        }
+        code {
+            font-size: 0.9rem;
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* --- Header y Intro --- */
         .intro {
             text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 50px;
+            font-size: 1.2rem;
+            color: #555;
+            margin: 25px 0 60px 0;
         }
+        .intro strong {
+            color: #111;
+        }
+
+        /* --- El Grid de Canvas (Dinámico) --- */
         .canvas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 25px;
         }
         .canvas-block {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            border-radius: 12px; /* Más redondeado */
+            padding: 30px;
+            border: 1px solid #EAEAEA;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            /* La Transición para el dinamismo */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        /* --- Efecto Dinámico (Hover) --- */
+        .canvas-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
         .canvas-block h4 {
-            margin: 0 0 15px 0;
-            font-size: 1.25rem;
-            color: #000;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
         .canvas-block .label-old {
             text-decoration: line-through;
-            color: #888;
-            font-size: 0.9rem;
+            color: #999;
+            font-size: 0.95rem;
         }
         .canvas-block .label-new {
             font-weight: 700;
-            color: #0056b3; /* Color de acento */
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            color: #111; /* El "nuevo" concepto es bold y claro */
         }
-        .canvas-block .question {
+        .canvas-block .vibe-check { /* "La pregunta cambia" ahora es "The Vibe" */
             font-style: italic;
             color: #444;
             margin-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
         }
+        
+        /* --- Sección "Why" (Propósito) --- */
+        .why-hxc article {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #EAEAEA;
+            margin-bottom: 15px;
+        }
+        .why-hxc h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        /* --- CTA (Call to Action) Minimalista --- */
         .cta-section {
             text-align: center;
             margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
         }
         .cta-button {
             display: inline-block;
-            background-color: #0056b3;
+            /* Color de Acento: Indigo */
+            background-color: #4A46E5; 
             color: #ffffff;
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 5px;
-            margin: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            margin: 10px 5px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
         .cta-button:hover {
-            background-color: #004494;
+            background-color: #3B38B8;
+            transform: translateY(-3px);
         }
         .cta-button.secondary {
-            background-color: #eee;
-            color: #333;
+            background-color: #fff;
+            color: #111;
+            border: 2px solid #EAEAEA;
         }
         .cta-button.secondary:hover {
-            background-color: #ddd;
+            background-color: #fff;
+            border-color: #111;
+            transform: translateY(-3px);
         }
+
     </style>
 </head>
 <body>
@@ -110,22 +171,20 @@
     <main class="container">
 
         <header>
-            <h1>El Canvas de Experiencia Humana (HXC)</h1>
-            <h3>Deja de vender "productos". Empieza a construir "significado".</h3>
+            <h1>El Canvas HXC</h1>
+            <h3>Menos Transacción. Más Conexión.</h3>
             <p class="intro">
-                Los modelos de negocio tradicionales se centran en la transacción. Optimizan procesos, analizan segmentos y buscan la eficiencia.
+                El canvas de negocio tradicional se enfoca en el <strong>qué</strong>.
                 <br>
-                El <i>Business Model Canvas</i> es brillante para el <strong>qué</strong>.
+                El Human Experience Canvas (HXC) se enfoca en el <strong>por qué</strong>.
                 <br>
-                El <i>Human Experience Canvas</i> (HXC) es esencial para el <strong>por qué</strong>.
-                <br><br>
-                Este modelo es la evolución: traduce las métricas de negocio en métricas de impacto humano. No reemplazamos la lógica de negocio; la profundizamos con empatía.
+                <br>
+                Esto no reemplaza la lógica de negocio. <strong>La humaniza.</strong>
             </p>
         </header>
 
         <section>
-            <h2>El Modelo HXC: Humanizando cada Bloque</h2>
-            <p>Así es como transformamos el canvas tradicional de un modelo de <i>procesos</i> a un modelo de <i>personas</i>.</p>
+            <h2>El Upgrade: De Procesos a Personas</h2>
 
             <div class="canvas-grid">
 
@@ -133,94 +192,94 @@
                     <h4>1. Clientes → Comunidades</h4>
                     <p class="label-old">En lugar de: <code>Segmentos de Cliente</code></p>
                     <p class="label-new">Ahora: <code>Comunidades y Contextos</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> No preguntes solo <i>quién compra</i>. Pregunta: <i>¿qué les importa?, ¿qué cultura comparten?, ¿cuál es su contexto real y sus verdaderas tensiones?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> No es un <i>target</i>. Es una <i>comunidad</i>. Descubre su cultura, su contexto, su <i>vibe</i> real.</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>2. Valor → Significado</h4>
                     <p class="label-old">En lugar de: <code>Propuesta de Valor</code></p>
                     <p class="label-new">Ahora: <code>Propuesta de Significado</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> Más allá del <i>qué obtienen</i> (el beneficio funcional), piensa: <i>¿cómo enriquece esto sus vidas?, ¿qué sentido les aporta?, ¿qué historia les ayuda a contar sobre sí mismos?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> Tu producto no es solo funcional. Es una señal. ¿Qué <i>significado</i> aporta a sus vidas? ¿Qué les ayuda a decir de sí mismos?</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>3. Canales → Diálogos</h4>
                     <p class="label-old">En lugar de: <code>Canales</code></p>
                     <p class="label-new">Ahora: <code>Diálogos y Conexiones</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> No son solo puntos de distribución. Son espacios de conversación. <i>¿Dónde y cómo conectamos auténticamente? ¿Es una relación bidireccional o solo un monólogo?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> Deja de ser un monólogo. Tus canales son espacios para <i>conversar</i>. ¿Estás escuchando? ¿Es una conexión real?</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>4. Relación → Pertenencia</h4>
                     <p class="label-old">En lugar de: <code>Relación con Clientes</code></p>
                     <p class="label-new">Ahora: <code>Vínculos y Pertenencia</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> El objetivo no es la "retención". El objetivo es la "pertenencia". <i>¿Cómo construimos una comunidad real, no solo una base de datos? ¿Cómo se sienten parte de algo más grande?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> La 'retención' es aburrida. La <i>pertenencia</i> es todo. No construyas una base de datos. Construye un club al que quieran pertenecer.</p>
                 </article>
                 
                 <article class="canvas-block">
                     <h4>5. Ingresos → Valor Recíproco</h4>
                     <p class="label-old">En lugar de: <code>Flujos de Ingreso</code></p>
                     <p class="label-new">Ahora: <code>Flujos de Valor (Recíproco)</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> El dinero es un resultado, no el único objetivo. <i>¿Cuál es el intercambio total de valor? (Social, intelectual, emocional). ¿Cómo es sostenible para ellos y para nosotros?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> El dinero es el <i>resultado</i>. El <i>valor</i> es el input. Piensa en el intercambio completo: social, cultural, emocional. Si es bueno para ellos, es bueno para ti.</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>6. Recursos → Cultura</h4>
                     <p class="label-old">En lugar de: <code>Recursos Clave</code></p>
                     <p class="label-new">Ahora: <code>Talento, Cultura y Propósito</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> Tu recurso más importante no es tu patente, es tu gente. <i>¿Cuál es nuestra cultura interna? ¿Nuestro equipo vive el propósito que proyectamos hacia afuera?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> Tu mejor recurso no es tu tech. Es tu <i>cultura</i>. ¿Tu equipo <i>vive</i> el propósito que vendes? El <i>hype</i> empieza adentro.</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>7. Actividades → Impacto</h4>
                     <p class="label-old">En lugar de: <code>Actividades Clave</code></p>
                     <p class="label-new">Ahora: <code>Acciones de Impacto</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> <i>¿Qué acciones diarias generan un impacto humano tangible (en el cliente, el equipo, la sociedad), más allá de la pura operación?</i></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> No es solo 'operar'. Es <i>impactar</i>. ¿Qué acciones de tu día a día (más allá de los KPls) dejan una huella humana real?</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>8. Socios → Ecosistema</h4>
                     <p class="label-old">En lugar de: <code>Socios Clave</code></p>
-                    <p class="label-new">Ahora: <code>Ecosistema y Aliados de Valores</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> No busques solo proveedores. <i>¿Con quién compartimos valores? ¿Con quién podemos crear un impacto mayor del que podríamos solos?</i></p>
+                    <p class="label-new">Ahora: <code>Ecosistema y Aliados</code></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> No busques proveedores. Busca <i>aliados de valores</i>. Juntos, el impacto se multiplica.</p>
                 </article>
 
                 <article class="canvas-block">
                     <h4>9. Costos → Inversión</h4>
                     <p class="label-old">En lugar de: <code>Estructura de Costos</code></p>
-                    <p class="label-new">Ahora: <code>Inversión en Sostenibilidad y Legado</code></p>
-                    <p class="question"><strong>La pregunta cambia:</strong> <i>¿Dónde invertimos nuestro tiempo, dinero y esfuerzo para asegurar nuestro impacto y sostenibilidad a largo plazo (humana, cultural, ambiental)?</i></p>
+                    <p class="label-new">Ahora: <code>Inversión en Legado</code></p>
+                    <p class="vibe-check"><strong>The Vibe:</strong> No es un 'costo'. Es una <i>inversión</i>. Cada peso es una apuesta por tu <i>legado</i>. ¿Dónde inviertes para ser sostenible (humana y culturalmente)?</p>
                 </article>
 
             </div>
         </section>
 
         <section class="why-hxc">
-            <h2>¿Por qué usar el HXC?</h2>
+            <h2>El "Por Qué" del HXC</h2>
             
             <article>
-                <h4>Porque el propósito es el nuevo <i>profit</i>.</h4>
-                <p>Las personas ya no compran lo que haces; compran <i>por qué</i> lo haces.</p>
+                <h4>El propósito es el nuevo <i>profit</i>.</h4>
+                <p>Las personas ya no compran lo que haces; compran <i>por qué</i> lo haces. Punto.</p>
             </article>
 
             <article>
-                <h4>Porque la empatía es la estrategia de negocio definitiva.</h4>
-                <p>Diseñar desde la experiencia humana no es "suave", es inteligente. Reduce la fricción, aumenta la lealtad y crea productos que la gente <strong>ama</strong>, no solo <strong>usa</strong>.</p>
+                <h4>La empatía es tu <i>edge</i> estratégico.</h4>
+                <p>Diseñar desde la empatía no es <i>soft</i>. Es tu ventaja competitiva. Crea productos que la gente <strong>ama</strong>, no solo <strong>usa</strong>.</p>
             </article>
             
             <article>
-                <h4>Porque construyes marcas, no solo negocios.</h4>
-                <p>Una marca es un sistema de significado. El HXC es el mapa para construir ese sistema de forma coherente, desde tu equipo hasta tu usuario final.</p>
+                <h4>Construyes Marcas, no solo Negocios.</h4>
+                <p>Una marca es un sistema de significado. El HXC es tu <i>playbook</i> para construirlo de forma coherente.</p>
             </article>
         </section>
 
         <footer class="cta-section">
             <h3>Diseña Negocios. Construye Significado.</h3>
-            <p>¿Listo para dejar de pensar en transacciones y empezar a construir relaciones?</p>
+            <p>¿Listo para dejar de transaccionar y empezar a conectar?</p>
             
             <div>
-                <a href="/descarga-canvas" class="cta-button">Descarga el Canvas HXC</a>
-                <a href="/contacto" class="cta-button secondary">Agenda una Consultoría</a>
+                <a href="/descarga-canvas" class="cta-button">Descarga el HXC</a>
+                <a href="/contacto" class="cta-button secondary">Hablemos</a>
             </div>
         </footer>
 
