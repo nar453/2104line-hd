@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackea la IA: Conecta tu Arte con tu "Por Qué"</title>
-    <!-- Asumiendo que style.css y Source Code Pro están enlazados en tu head principal --><link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,9 +16,10 @@
                     <li><a href="que-son-las-hd.html">¿Qué son las HD?</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
                     <li><a href="referencias.html">Referencias</a></li>
-                    <li><a href="human-experience-canvas.html"class="active">Human Experience Canvas</a></li>
-                    <li><a href="producto-arte-hxc-ia.html">Producto. Arte. HXC. IA</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>   
+                    <li><a href="human-experience-canvas.html">Human Experience Canvas</a></li>
+                    <!-- CORRECCIÓN: La clase 'active' se movió a esta página -->
+                    <li><a href="producto-arte-hxc-ia.html" class="active">Producto. Arte. HXC. IA</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>    
                 </ul>
             </nav>
         </div>
@@ -33,15 +34,14 @@
 
     <div class="main-container">
         <aside class="sidebar">
-            <p>Producto. Arte. HXC. IA</p> <!-- Puedes cambiar este texto según lo que quieras en la sidebar para esta página --></aside>
+            <p>Producto. Arte. HXC. IA</p>
+        </aside>
 
         <main class="content">
 
-            --<h1>Producto. Arte. HXC. IA: Conecta tu Arte con tu "Por Qué"</h1>--
-
-
-
-            --<h4>Has pasado por tres momentos:</h4>--
+            <!-- CORRECCIÓN: Se eliminaron los '--' que rodeaban los títulos -->
+            <h1>Producto. Arte. HXC. IA: Conecta tu Arte con tu "Por Qué"</h1>
+            <h4>Has pasado por tres momentos:</h4>
 
             <ul>
                 <li><strong>Producción Comercial:</strong> Creaste un producto (tus <strong>fotos</strong>).</li>
@@ -53,42 +53,56 @@
 
             <p><strong>Spoiler Alert:</strong> La respuesta que te dé la IA <strong>no es tu entregable final</strong>. Es el <em>borrador v1</em> para que tú reacciones, edites y construyas sobre él.</p>
 
-            <hr>
+            <!-- CORRECCIÓN: Se eliminó la etiqueta <hr> -->
 
             <h2>Paso 1: El "Prompt Base" (Tu Herramienta)</h2>
 
             <p>Copia el siguiente texto. Lo pegarás en la IA que prefieras (Gemini, ChatGPT, etc.), pero primero, tienes que personalizar tu parte.</p>
 
-            <pre><code>
-[ROL Y OBJETIVO]
-Actúa como un estratega de marca experto en 'human-centered design' y 'storytelling'. Mi objetivo es sintetizar tres elementos de mis talleres:
-(1) Producción Artística y Comercial (El Producto)
-(2) Arte (La Expresión Personal)
-(3) El 'Human Experience Canvas' (El Insight Humano)
+            <!-- 
+                CORRECCIÓN: Se eliminaron las etiquetas <pre><code> y 
+                se formateó el contenido con HTML semántico (h3, p, ol, ul) 
+                para que tu CSS pueda aplicarle los estilos morados.
+            -->
+            
+            <h3>[ROL Y OBJETIVO]</h3>
+            <p>Actúa como un estratega de marca experto en 'human-centered design' y 'storytelling'. Mi objetivo es sintetizar tres elementos de mis talleres:</p>
+            <ol>
+                <li>Producción Artística y Comercial (El Producto)</li>
+                <li>Arte (La Expresión Personal)</li>
+                <li>El 'Human Experience Canvas' (El Insight Humano)</li>
+            </ol>
 
-[CONTEXTO DE LOS TALLERES]
-He creado productos artísticos (fotos y audios) con potencial comercial. También he usado el 'Human Experience Canvas' (HXC) para definir el "por qué" de mi proyecto, enfocándome en el significado y la comunidad, no solo en la transacción.
+            <h3>[CONTEXTO DE LOS TALLERES]</h3>
+            <p>He creado productos artísticos (fotos y audios) con potencial comercial. También he usado el 'Human Experience Canvas' (HXC) para definir el "por qué" de mi proyecto, enfocándome en el significado y la comunidad, no solo en la transacción.</p>
 
-[MIS INPUTS (Materiales)]
-1.  **Fotografías (El Producto):** [Aquí describe tus fotos. La 'vibra', el estilo, la intención comercial. Ej: "Son fotos de producto de un café, pero con una estética muy melancólica y solitaria, usando luz natural."]
-2.  **Audios (La Expresión):** [Aquí describe tus audios. El contenido, el tono, la emoción. Ej: "Es un clip de 30s de una conversación íntima con mi abuela sobre el miedo a fracasar. El tono es vulnerable."]
-3.  **Human Experience Canvas (El Insight):** [Aquí resume los 2-3 hallazgos clave de tu HXC. Enfócate en el Bloque 1 (Comunidades) y Bloque 2 (Significado). Ej: "Mi 'Comunidad' no son 'clientes', es 'gente creativa sintiéndose sola en la ciudad'. Mi 'Propuesta de Significado' no es 'vender café', es 'ofrecer un espacio para la melancolía productiva'."]
+            <h3>[MIS INPUTS (Materiales)]</h3>
+            <ol>
+                <li><strong>Fotografías (El Producto):</strong> [Aquí describe tus fotos. La 'vibra', el estilo, la intención comercial. Ej: "Son fotos de producto de un café, pero con una estética muy melancólica y solitaria, usando luz natural."]</li>
+                <li><strong>Audios (La Expresión):</strong> [Aquí describe tus audios. El contenido, el tono, la emoción. Ej: "Es un clip de 30s de una conversación íntima con mi abuela sobre el miedo a fracasar. El tono es vulnerable."]</li>
+                <li><strong>Human Experience Canvas (El Insight):</strong> [Aquí resume los 2-3 hallazgos clave de tu HXC. Enfócate en el Bloque 1 (Comunidades) y Bloque 2 (Significado). Ej: "Mi 'Comunidad' no son 'clientes', es 'gente creativa sintiéndose sola en la ciudad'. Mi 'Propuesta de Significado' no es 'vender café', es 'ofrecer un espacio para la melancolía productiva'."]</li>
+            </ol>
 
-[TAREA DOBLE]
-Usando la descripción de mis [Fotos], [Audios] y [Human Experience Canvas], genera dos piezas de texto:
+            <h3>[TAREA DOBLE]</h3>
+            <p>Usando la descripción de mis [Fotos], [Audios] y [Human Experience Canvas], genera dos piezas de texto:</p>
+            <ol>
+                <li><strong>LA NARRATIVA:</strong> Un texto corto y potente (como un manifiesto de marca o el 'caption' de una exposición) que use la [Propuesta de Significado] de mi HXC como el <em>puente</em> para conectar el producto (fotos) con la expresión personal (audios). La narrativa debe vender el producto, pero debe estar anclada en la verdad humana que encontré en el HXC.</li>
+                <li><strong>LA REFLEXIÓN:</strong> Un texto en primera persona (como si fuera yo, el estudiante) que explore el <em>proceso</em> de síntesis. Debe responder a estas preguntas guía:
+                    <ul>
+                        <li>¿Cómo el HXC (específicamente la idea de 'Propuesta de Significado' y 'Comunidades') me dio el lenguaje para conectar mi producto (lo comercial) con mi arte (lo personal)?</li>
+                        <li>¿Qué 'Vibe' del HXC (ej. 'pertenencia', 'diálogo', 'impacto') fue el "¡clic!" que me faltaba para unificar mi proyecto?</li>
+                        <li>¿Qué fue más difícil: crear el producto (fotos/audios) o encontrar el 'por qué' (el HXC)? ¿Por qué?</li>
+                    </ul>
+                </li>
+            </ol>
 
-1.  **LA NARRATIVA:** Un texto corto y potente (como un manifiesto de marca o el 'caption' de una exposición) que use la [Propuesta de Significado] de mi HXC como el *puente* para conectar el producto (fotos) con la expresión personal (audios). La narrativa debe vender el producto, pero debe estar anclada en la verdad humana que encontré en el HXC.
-2.  **LA REFLEXIÓN:** Un texto en primera persona (como si fuera yo, el estudiante) que explore el *proceso* de síntesis. Debe responder a estas preguntas guía:
-    * ¿Cómo el HXC (específicamente la idea de 'Propuesta de Significado' y 'Comunidades') me dio el lenguaje para conectar mi producto (lo comercial) con mi arte (lo personal)?
-    * ¿Qué 'Vibe' del HXC (ej. 'pertenencia', 'diálogo', 'impacto') fue el "¡clic!" que me faltaba para unificar mi proyecto?
-    * ¿Qué fue más difícil: crear el producto (fotos/audios) o encontrar el 'por qué' (el HXC)? ¿Por qué?
-
-[FORMATO Y TONO]
-* **Tono:** Auténtico, introspectivo, claro y juvenil. (Piensa en el "The Vibe:" del HXC). Evita el lenguaje corporativo.
-* **Estructura:** Separa claramente tu respuesta en "NARRATIVA:" y "REFLEXIÓN:".
-</code></pre>
-
-            <hr>
+            <h3>[FORMATO Y TONO]</h3>
+            <ul>
+                <li><strong>Tono:</strong> Auténtico, introspectivo, claro y juvenil. (Piensa en el "The Vibe:" del HXC). Evita el lenguaje corporativo.</li>
+                <li><strong>Estructura:</strong> Separa claramente tu respuesta en "NARRATIVA:" y "REFLEXIÓN:".</li>
+            </ul>
+            
+            <!-- CORRECCIÓN: Se eliminó la etiqueta <hr> -->
 
             <h2>Paso 2: La Deconstrucción (El "Cómo Funciona")</h2>
 
@@ -119,7 +133,7 @@ Usando la descripción de mis [Fotos], [Audios] y [Human Experience Canvas], gen
             <h4>5. [FORMATO Y TONO]</h4>
             <p><strong>Por qué funciona:</strong> Control de calidad. Le pedimos que suene como el HXC: "auténtico, introspectivo... menos transacción, más conexión".</p>
 
-            <hr>
+            <!-- CORRECCIÓN: Se eliminó la etiqueta <hr> -->
 
             <h2>Paso 3: Tu Misión Real (El "Post-Prompt")</h2>
 
@@ -128,7 +142,7 @@ Usando la descripción de mis [Fotos], [Audios] y [Human Experience Canvas], gen
 
             <ol>
                 <li><strong>ANALIZA:</strong> Lee la respuesta. ¿Qué te "movió"? ¿En qué se equivocó la IA? ¿Qué conexión inesperada encontró?</li>
-                <li><strong>REMEZCLA (REMIX):</strong> Toma la "Narrativa" que te dio y reescríbela. Hazla tuya. Úsala como inspiración, no como texto final.</li>
+                <li><strong>REMEZCLA (REMIX):</strong> Toma la "Narrativa" que te dio y reescríbiela. Hazla tuya. Úsala como inspiración, no como texto final.</li>
                 <li><strong>APROPIA:</strong> Usa la "Reflexión" de la IA como un espejo. Escribe <em>tu propia reflexión</em>. ¿La IA te ayudó a ver cómo el HXC fue el puente? ¿Cómo tu "Propuesta de Significado" le dio alma a tu producto?</li>
             </ol>
 
@@ -145,7 +159,7 @@ Usando la descripción de mis [Fotos], [Audios] y [Human Experience Canvas], gen
                 CC BY-NC-SA 4.0
             </a>
         </p>
-        <p>Zapopan, 24 de octubre de 2025, 11:07:56 a.m.</p>
-    </footer>
+        <p>Zapopan, 24 de octubre de 2025, 11:07:56 a.m.</p>
+    </footer>
 </body>
 </html>
