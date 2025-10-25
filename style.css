@@ -273,101 +273,86 @@ body {
 }
 
 
-/* --- INICIO: ESTILOS INTEGRADOS DEL HXC (Human Experience Canvas) --- */
+/* --- INICIO: Estilos del Layout HXC Business Canvas --- */
 
-.canvas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px; /* Espacio añadido */
+/* (Solo se aplica en pantallas grandes) */
+@media (min-width: 1024px) {
+
+    /* El contenedor principal del canvas */
+    .hxc-canvas-layout {
+        width: 100%;
+        border-top: 1px solid var(--color-border);
+        border-left: 1px solid var(--color-border);
+        background-color: var(--color-bg-content);
+    }
+
+    /* La fila superior que contiene las 5 columnas principales */
+    .hxc-top-row {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* La fila inferior para costos e ingresos */
+    .hxc-bottom-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Una columna individual */
+    .hxc-col {
+        flex-grow: 1;
+        flex-basis: 0; /* Distribuye el espacio equitativamente */
+        border-right: 1px solid var(--color-border);
+    }
+
+    /* Columna central (Propuesta de Significado), la hacemos más ancha */
+    .hxc-col-center {
+        flex-grow: 1.5; /* Le da más peso */
+    }
+
+    /* Columnas que apilan bloques verticalmente */
+    .hxc-col-stacked {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Modificamos los .canvas-block DENTRO del layout */
+    .hxc-canvas-layout .canvas-block {
+        /* Hacemos que todos los bloques en una fila apilada tengan la misma altura */
+        flex-grow: 1; 
+        border: none; /* Quitamos el borde individual */
+        border-bottom: 1px solid var(--color-border); /* Añadimos un separador */
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none; /* Desactivamos el hover para un look de 'plantilla' */
+    }
+
+    .hxc-canvas-layout .canvas-block:hover {
+        transform: none; /* Sin efecto hover */
+        border-color: transparent;
+        background-color: #fcfcfc; /* Un sutil hover */
+    }
+
+    /* El último bloque en una pila no necesita borde inferior */
+    .hxc-col-stacked .canvas-block:last-child {
+        border-bottom: none;
+    }
+
+    /* Bloques de la fila inferior */
+    .hxc-bottom-row .canvas-block {
+        border-bottom: none;
+        width: 100%;
+    }
+
+    /* Quitamos los estilos de "grid" que ya no aplican en desktop */
+    .content .canvas-grid {
+        display: block;
+        grid-template-columns: none;
+        gap: 0;
+        margin-top: 0;
+    }
 }
-
-.canvas-block {
-    background-color: var(--color-bg-content);
-    border-radius: 0; /* Estilo brutalista/plano */
-    padding: 30px;
-    border: 1px solid var(--color-border);
-    box-shadow: none; /* Sin sombras */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-/* Efecto Dinámico (Hover) */
-.canvas-block:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-text-dark); /* Borde se vuelve negro */
-}
-
-/* h4 ya está cubierto por .content h4 */
-
-.canvas-block .label-old {
-    color: #777;
-    font-size: 0.95rem;
-}
-
-.canvas-block .label-new {
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: var(--color-accent); /* "Ahora:" en morado */
-}
-
-.canvas-block .vibe-check {
-    color: var(--color-text);
-    margin-top: 15px;
-    border-top: 1px solid var(--color-border-light);
-    padding-top: 15px;
-}
-
-/* Sección "Why" (Propósito) */
-.why-hxc {
-    margin-top: 40px; /* Espacio añadido */
-}
-
-.why-hxc article {
-    background-color: var(--color-bg-content);
-    padding: 25px;
-    border-radius: 0;
-    border: 1px solid var(--color-border);
-    margin-bottom: 15px;
-}
-/* h4 y strong ya están cubiertos por .content h4 y .content strong */
-
-
-/* CTA (Call to Action) Estilo "Link" */
-.cta-section {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid var(--color-border-light);
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--color-accent); /* CTAs en morado */
-    padding: 15px 10px;
-    font-size: 1.1rem;
-    font-weight: 700; /* Negrita */
-    text-decoration: none;
-    border-radius: 0;
-    margin: 10px 5px;
-    transition: transform 0.2s ease, text-decoration 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: transparent;
-    transform: translateY(-3px);
-    text-decoration: underline;
-}
-
-.cta-button.secondary {
-    background-color: transparent;
-    color: var(--color-accent); /* También en morado */
-    border: none;
-}
-
-.cta-button.secondary:hover {
-    border: none;
-    text-decoration: underline;
-}
-
-/* --- FIN: ESTILOS INTEGRADOS DEL HXC --- */
+/* --- FIN: Estilos del Layout HXC Business Canvas --- */
