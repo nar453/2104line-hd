@@ -273,82 +273,71 @@ body {
     }
 }
 
+/* --- INICIO: Adiciones de Estilo Faltantes --- */
 
-/* --- INICIO: Estilos del Layout HXC Business Canvas --- */
+/* 1. Estilo para el texto tachado (scratched) */
+.content del {
+    /* Usa un color sutil en lugar de negro para que no sea tan agresivo */
+    color: #999; 
+    text-decoration: line-through;
+}
+
+/* --- 2. Estilos del Layout HXC Business Canvas --- */
 
 /* (Solo se aplica en pantallas grandes) */
 @media (min-width: 1024px) {
 
-    /* El contenedor principal del canvas */
     .hxc-canvas-layout {
         width: 100%;
         border-top: 1px solid var(--color-border);
         border-left: 1px solid var(--color-border);
         background-color: var(--color-bg-content);
     }
-
-    /* La fila superior que contiene las 5 columnas principales */
     .hxc-top-row {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid var(--color-border);
     }
-
-    /* La fila inferior para costos e ingresos */
     .hxc-bottom-row {
         display: flex;
         flex-direction: row;
     }
-
-    /* Una columna individual */
     .hxc-col {
         flex-grow: 1;
-        flex-basis: 0; /* Distribuye el espacio equitativamente */
+        flex-basis: 0; 
         border-right: 1px solid var(--color-border);
     }
-
-    /* Columna central (Propuesta de Significado), la hacemos más ancha */
     .hxc-col-center {
-        flex-grow: 1.5; /* Le da más peso */
+        flex-grow: 1.5; 
     }
-
-    /* Columnas que apilan bloques verticalmente */
     .hxc-col-stacked {
         display: flex;
         flex-direction: column;
     }
-
-    /* Modificamos los .canvas-block DENTRO del layout */
     .hxc-canvas-layout .canvas-block {
-        /* Hacemos que todos los bloques en una fila apilada tengan la misma altura */
         flex-grow: 1; 
-        border: none; /* Quitamos el borde individual */
-        border-bottom: 1px solid var(--color-border); /* Añadimos un separador */
+        border: none; 
+        border-bottom: 1px solid var(--color-border); 
         margin-top: 0;
         margin-bottom: 0;
         border-radius: 0;
         box-shadow: none;
-        transition: none; /* Desactivamos el hover para un look de 'plantilla' */
+        transition: none; 
+        padding: 20px; /* Reducimos un poco el padding para que quepa */
     }
-
     .hxc-canvas-layout .canvas-block:hover {
-        transform: none; /* Sin efecto hover */
+        transform: none; 
         border-color: transparent;
-        background-color: #fcfcfc; /* Un sutil hover */
+        background-color: #fcfcfc; 
     }
-
-    /* El último bloque en una pila no necesita borde inferior */
     .hxc-col-stacked .canvas-block:last-child {
         border-bottom: none;
     }
-
-    /* Bloques de la fila inferior */
     .hxc-bottom-row .canvas-block {
         border-bottom: none;
         width: 100%;
     }
-
-    /* Quitamos los estilos de "grid" que ya no aplican en desktop */
+    /* Sobreescribimos el grid de móvil para que no aplique en desktop */
     .content .canvas-grid {
         display: block;
         grid-template-columns: none;
@@ -356,7 +345,71 @@ body {
         margin-top: 0;
     }
 }
-/* --- FIN: Estilos del Layout HXC Business Canvas --- */
+
+/* --- 3. Estilos para Acordeón y Tarjetas UNESCO --- */
+
+.content details {
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 10px;
+}
+.content summary {
+    font-weight: 700;
+    color: var(--color-accent); 
+    font-size: 1.15rem; 
+    padding: 15px 0;
+    cursor: pointer;
+    list-style: none; 
+    position: relative;
+    padding-left: 30px; 
+}
+.content summary::-webkit-details-marker {
+    display: none; 
+}
+.content summary::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-weight: 700;
+}
+.content details[open] > summary::before {
+    content: '−'; 
+}
+.content details[open] > summary {
+    margin-bottom: 15px; 
+}
+.content details > ul {
+    margin-bottom: 20px; 
+}
+.ds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.ds-card {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-content);
+    padding: 20px;
+}
+.ds-card .diagnosis {
+    font-weight: 700;
+    color: #c0392b; 
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-border-light);
+}
+.ds-card .solution {
+    font-weight: 700;
+    color: var(--color-accent); 
+}
+.ds-card .solution-desc {
+    font-size: 0.95em;
+    color: var(--color-text);
+    margin-top: 5px;
+}
+/* --- FIN: Adiciones de Estilo Faltantes --- */
+
 
 /* --- INICIO: Estilos para Acordeón y Tarjetas UNESCO --- */
 
